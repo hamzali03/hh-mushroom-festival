@@ -88,8 +88,12 @@ sayGoodbyeButton.addEventListener('click', () => {
     const stillHungry = [];
     for (const friend of friends) {
         // > if the friend is not fully satisfied, push
+        if (friend.satisfied !== 3) {
+            stillHungry.push(friend);
+        }
         // them into the stillHungry array
     }
+
     friends = stillHungry;
     displayFriends();
 });
